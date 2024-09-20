@@ -1,6 +1,7 @@
 {
   "name": "at-spec",
   "version": "3.2.1",
+  "private": false,
   "license": "MIT",
   "type": "module",
   "scripts": {
