@@ -11,7 +11,7 @@
     "deploy": "gh-pages -d dist",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
