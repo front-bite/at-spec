@@ -4,7 +4,7 @@
   "private": false,
   "license": "MIT",
   "type": "module",
-  "homepage": "https://front-bite.github.io/at-spec/",
+  "homepage": "http://front-bite.github.io/at-spec/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
