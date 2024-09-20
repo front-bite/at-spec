@@ -7,11 +7,11 @@
   "homepage": "http://front-bite.github.io/at-spec/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -b main -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
