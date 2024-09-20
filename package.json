@@ -4,11 +4,14 @@
   "private": false,
   "license": "MIT",
   "type": "module",
+  "homepage": "https://front-bite.github.io/at-spec/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx src"
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -b main -d build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
