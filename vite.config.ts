@@ -7,7 +7,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tsconfigPaths(), reactScopedCssPlugin()],
-  base: '/at-spec/',
+  base: '/at-spec',
   css: {
     preprocessorOptions: {
       scss: {
