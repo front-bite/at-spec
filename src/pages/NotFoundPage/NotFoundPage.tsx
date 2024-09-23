@@ -3,12 +3,13 @@ import { LeftCircleOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 
 import { Button, Result } from 'antd';
+import { ROUTES_MAP } from 'src/_common/routes/routesMap';
 
 export const NotFoundPage = () => {
   const navigate = useNavigate();
 
   const handleBack = () => {
-    navigate(-1);
+    navigate(ROUTES_MAP.HOME);
   };
 
   return (
@@ -18,7 +19,7 @@ export const NotFoundPage = () => {
       subTitle="Не нашли такую страничку."
       extra={
         <Button icon={<LeftCircleOutlined />} onClick={handleBack} type="primary">
-          Вернуться назад
+          На главную страницу
         </Button>
       }
     />
