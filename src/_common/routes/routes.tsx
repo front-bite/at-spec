@@ -42,5 +42,5 @@ export const ROUTER_CONFIG = createBrowserRouter(
       ],
     },
   ],
-  { basename: '/at-spec' }
+  { basename: '/' }
 );

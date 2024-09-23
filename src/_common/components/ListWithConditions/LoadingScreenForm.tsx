@@ -120,9 +120,7 @@ export const LoadingScreenForm = () => {
                 {arrayList.map((innerArray) => (
                   <React.Fragment key={index}>
                     {innerArray.type === 'MODEL' && (
-                      <Link to={`../${truncateString(innerArray.name)}`} target="_blank">
-                        {innerArray.name}
-                      </Link>
+                      <Link to={`../${truncateString(innerArray.name)}`}>{innerArray.name}</Link>
                     )}
                     {innerArray.type === 'CONDITIONAL' && <Text strong>{innerArray.name}</Text>}
                     {innerArray.type !== 'MODEL' && innerArray.type !== 'CONDITIONAL' && <Text>{innerArray.name}</Text>}

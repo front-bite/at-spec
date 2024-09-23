@@ -1,8 +1,6 @@
 import { DeleteOutlined, PlusOutlined } from '@ant-design/icons';
 
 import type React from 'react';
-import { useEffect } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
 
 import { Button, Flex, Popconfirm, Table } from 'antd';
 import type { ColumnType } from 'antd/es/table';
@@ -12,13 +10,13 @@ import {
   addAttributeBackendTableRecord,
   deleteAttributeBackendTableRecord,
   getAttributeBackendTableData,
-  setAddAttributeBackendTable,
 } from 'src/_common/components/AttributeBackendTable/BackendTableSlice';
 import { EEditType } from 'src/_common/components/EditDrawer/EditDrawerSlice';
 import { useAppDispatch, useAppSelector } from 'src/store/hooks/hooks';
 
 export const BackendTable: React.FC = () => {
   const tableData = useAppSelector(getAttributeBackendTableData);
+  const dispatch = useAppDispatch();
 
   const deleteRow = (key: string) => {
     dispatch(deleteAttributeBackendTableRecord({ key }));

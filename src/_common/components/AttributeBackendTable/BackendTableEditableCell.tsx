@@ -1,6 +1,6 @@
 import { EditOutlined } from '@ant-design/icons';
 
-import type React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { Button, Flex, Typography } from 'antd';
@@ -64,16 +64,12 @@ export const BackendTableEditableCell: React.FC<{
       {text}
       <Typography.Text>
         {tags.map((tag) => (
-          <>
-            {tag.type === ETagTypes.MODEL && (
-              <Link to={`../${truncateString(tag.name)}`} target="_blank">
-                {tag.name}
-              </Link>
-            )}
+          <React.Fragment key={tag?.id}>
+            {tag.type === ETagTypes.MODEL && <Link to={`../${truncateString(tag.name)}`}>{tag.name}</Link>}
             {tag.type === ETagTypes.CONDITIONAL && <Typography.Text strong>{tag.name}</Typography.Text>}
             {tag.type === ETagTypes.INPUT && <Typography.Text>{tag.name}</Typography.Text>}
             {tags.length && ' '}
-          </>
+          </React.Fragment>
         ))}
       </Typography.Text>
       <Button icon={<EditOutlined />} size="small" type="link" onClick={handleEdit} />

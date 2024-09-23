@@ -15,11 +15,7 @@ export const TagDetails: React.FC<ITagDetailsProps> = ({ tags }) => {
     <>
       {tags.map((tag, index) => (
         <React.Fragment key={tag.id}>
-          {tag.type === 'MODEL' && (
-            <Link to="/" target="_blank">
-              {tag.name}
-            </Link>
-          )}
+          {tag.type === 'MODEL' && <Link to="/">{tag.name}</Link>}
           {tag.type === 'CONDITIONAL' && <Text strong>{tag.name}</Text>}
           {tag.type !== 'MODEL' && tag.type !== 'CONDITIONAL' && <Text>{tag.name}</Text>}
           {index !== tags.length - 1 && ' '}

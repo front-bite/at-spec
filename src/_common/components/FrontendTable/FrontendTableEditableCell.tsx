@@ -66,11 +66,7 @@ export const FrontendTableEditableCell: React.FC<{
       <Typography.Text>
         {tags.map((tag) => (
           <React.Fragment key={uuidv4()}>
-            {tag.type === ETagTypes.MODEL && (
-              <Link to={`../${truncateString(tag.name)}`} target="_blank">
-                {tag.name}
-              </Link>
-            )}
+            {tag.type === ETagTypes.MODEL && <Link to={`../${truncateString(tag.name)}`}>{tag.name}</Link>}
             {tag.type === ETagTypes.CONDITIONAL && <Typography.Text strong>{tag.name}</Typography.Text>}
             {tag.type === ETagTypes.INPUT && <Typography.Text>{tag.name}</Typography.Text>}
             {tags.length && ' '}
